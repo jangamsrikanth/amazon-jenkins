@@ -1,0 +1,11 @@
+######Create RPM repository
+cat <<EOF > /etc/yum.repos.d/adoptium.repo
+[Adoptium]
+name=Adoptium
+baseurl=https://packages.adoptium.net/artifactory/rpm/amazonlinux/2/\$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.adoptium.net/artifactory/api/gpg/key/public
+EOF
+### Install Temurin 17
+dnf -y install temurin-17-jdk
