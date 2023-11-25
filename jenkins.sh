@@ -5,17 +5,8 @@
 # Version: 1.0
 # Team : DevOps
 #####################################
-echo "Create RPM repository"
-cat <<EOF > /etc/yum.repos.d/adoptium.repo
-[Adoptium]
-name=Adoptium
-baseurl=https://packages.adoptium.net/artifactory/rpm/amazonlinux/2/\$basearch
-enabled=1
-gpgcheck=1
-gpgkey=https://packages.adoptium.net/artifactory/api/gpg/key/public
-EOF
 echo "install java -17"
-dnf -y install temurin-17-jdk
+sudo dnf install java-17-amazon-corretto -y
 echo "system update"
 sudo yum update –y
 echo " Add the Jenkins repo"
