@@ -1,5 +1,4 @@
 #! /bin/bash
-#!/bin/bash
 ##################################
 # Author : Srikanth
 # created date: 26.11.2023
